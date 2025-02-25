@@ -170,30 +170,32 @@ public class BST implements BSTInterface {
   public void printInOrder() {
     if (root != null) {
       printInOrderHelper(root.getLeft());
-      System.out.println(root.getValue());
+      System.out.print(root.getValue()+",");
       printInOrderHelper(root.getRight());
     }
+    System.out.println("");
   }
 
   private void printInOrderHelper(TreeNode subroot) {
     if (subroot != null) {
       printInOrderHelper(subroot.getLeft());
-      System.out.println(subroot.getValue());
+      System.out.print(subroot.getValue()+",");
       printInOrderHelper(subroot.getRight());
     }
   }
 
   public void printPreOrder() {
     if (root != null) {
-      System.out.println(root.getValue());
+      System.out.print(root.getValue()+",");
       printPreOrderHelper(root.getLeft());
       printPreOrderHelper(root.getRight());
     }
+    System.out.println("");
   }
 
   private void printPreOrderHelper(TreeNode subroot) {
     if (subroot != null) {
-      System.out.println(subroot.getValue());
+      System.out.print(subroot.getValue()+",");
       printPreOrderHelper(subroot.getLeft());
       printPreOrderHelper(subroot.getRight());
     }
@@ -203,15 +205,16 @@ public class BST implements BSTInterface {
     if (root != null) {
       printPostOrderHelper(root.getLeft());
       printPostOrderHelper(root.getRight());
-      System.out.println(root.getValue());
+      System.out.print(root.getValue()+",");
     }
+    System.out.println("");
   }
 
   private void printPostOrderHelper(TreeNode subroot) {
     if (subroot != null) {
       printPostOrderHelper(subroot.getLeft());
       printPostOrderHelper(subroot.getRight());
-      System.out.println(subroot.getValue());
+      System.out.print(subroot.getValue()+",");
     }
   }
 }
