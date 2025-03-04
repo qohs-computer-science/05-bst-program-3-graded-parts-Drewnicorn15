@@ -57,6 +57,7 @@ public class BST implements BSTInterface {
       add(toAdd);
       return true;
     } else {
+      add(toAdd);
       return false;
     }
   }
